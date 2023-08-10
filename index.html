@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Navbar Responsivo</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">Web Dev</a></div>
+            <ul class="links">
+                <li><a href="hero">Inicio</a></li>
+                <li><a href="about">Sobre</a></li>
+                <li><a href="services">Serviços</a></li>
+                <li><a href="contact">Contatos</a></li>
+            </ul>
+            <a href="#" class="action_btn">Iniciar</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdown_menu">
+            <li><a href="hero">Inicio</a></li>
+            <li><a href="about">Sobre</a></li>
+            <li><a href="services">Serviços</a></li>
+            <li><a href="contact">Contato</a></li>
+            <li><a href="#" class="action_btn">Iniciar</a></li>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Bem Vindo!</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci voluptates, <br>illo neque blanditiis magnam nam esse beatae tenetur rerum quis.</p>
+        </section>
+    </main>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const toggleBtnIcon = document.querySelector('.toggle_btn i');
+        const dropDownMenu = document.querySelector('.dropdown_menu');
+
+        toggleBtn.onclick = function() {
+            dropDownMenu.classList.toggle('open');
+            const isOpen = dropDownMenu.classList.contais('open');
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-x' : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+
+</html>
